@@ -23,9 +23,10 @@ def run_pipeline():
 
     print(f"After deduplication: {len(unique_jobs)}")
 
-    matched_jobs = match_jobs_with_resume(unique_jobs, resume_text)
+    # matched_jobs = match_jobs_with_resume(unique_jobs, resume_text)
 
-    return matched_jobs
+    return unique_jobs
 
 if __name__ == "__main__":
-    run_pipeline()
+    unique_jobs = run_pipeline()
+    print(unique_jobs)
