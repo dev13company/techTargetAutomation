@@ -1,6 +1,6 @@
 from aggregators.adzuna import fetch_adzuna_jobs
 # from aggregators.muse import fetch_muse_jobs
-# from aggregators.rapidapi_india import fetch_rapidapi_jobs
+from aggregators.rapidapi_india import fetch_rapidapi_jobs
 from util.deduplicator import deduplicate_jobs
 # from matcher.semantic_matcher import match_jobs_with_resume
 
@@ -13,7 +13,7 @@ def run_pipeline():
     # muse_jobs = fetch_muse_jobs()
 
     print("Fetching RapidAPI India jobs...")
-    # rapid_jobs = fetch_rapidapi_jobs(query="jobs")
+    rapid_jobs = fetch_rapidapi_jobs(query="jobs")
 
     all_jobs = adzuna_jobs #+ rapid_jobs
 
